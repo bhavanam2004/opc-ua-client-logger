@@ -1,0 +1,65 @@
+Setup and run instructions
+
+This file explains how to set up the simulator and run the data logging program step by step.
+
+System requirements
+
+You need the following:
+
+Windows operating system
+
+Matrikon OPC Simulation Server installed
+
+Python installed on your system
+
+Basic knowledge of running Python programs
+
+Simulator setup
+
+Open Matrikon OPC Explorer.
+Check that the simulation server is available with the name Matrikon.OPC.Simulation.1.
+Add some simulated tags such as:
+Random.Real8
+Random.Int4
+Bucket Brigade.Real8
+Saw-toothed Waves.Real8
+
+Make sure that the tag values are changing in the explorer.
+
+Python environment setup
+
+Open Command Prompt.
+Install the required Python libraries by running:
+pip install pywin32 pandas
+
+Place the Python program file in a folder where you want to store the output CSV files.
+
+Running the application
+
+Open Command Prompt.
+Navigate to the project folder.
+Run the program using:
+python matrikon_opc_csv_logger.py
+
+The program will start running and reading OPC data automatically.
+
+Output generation
+
+A folder for CSV files is created automatically by the program.
+CSV files are generated without manual creation.
+One CSV file is created for each hour.
+New data rows are added at each read interval.
+
+Example output files:
+OPC_Log_2026-01-06_16.csv
+OPC_Log_2026-01-06_17.csv
+
+Stopping the program
+
+To stop the program, press CTRL + C in the Command Prompt window.
+
+Important notes
+
+The CSV files should not be created manually.
+The program only reads OPC data and does not change any values.
+This project is meant for learning and demonstration purposes.
